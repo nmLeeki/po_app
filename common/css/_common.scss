@@ -1,0 +1,270 @@
+/*공통 스타일 정의*/
+body {overflow:visible;
+    &.active {overflow:hidden;}
+    &.scrollDisable{overflow-y: hidden;}
+}
+#wrapper {overflow:hidden;}
+.container_1{max-width: 1760px; margin: auto; position: relative;
+    @include maxWidth(1840px){margin:0 30px;}
+    @include maxWidth($m768){margin: 0 15px}
+}
+.container {//포트폴리오 상세에서 사용되는 container
+    @include clear; max-width:1580px;margin:0 auto;
+    @include maxWidth(1640px){padding:0 30px;}
+    @include maxWidth($m768){padding:0 15px;}
+}
+.container1 {
+    max-width: 1340px; margin: auto;
+    @include maxWidth($con1600){padding:0 30px;}
+    @include maxWidth($m768){padding:0 15px;}
+}
+.container2 {//포트폴리오 상세에서 사용되는 container
+    max-width: 1240px; margin: auto;
+    @include maxWidth($con1600){padding:0 30px;}
+    @include maxWidth($m768){padding:0 15px;}
+}
+.skip_navi {position:absolute; z-index:999999; width:100%; left:0; top:0; text-align:center;
+	a{display:block; position:absolute; left:0; top:-9999px; z-index:1; width:100%; height:40px; line-height:40px; background-color:#333; color:#fff; font-size:20px; font-weight:700;
+		&:hover, &:focus{top:0;}
+	}
+}
+/*페이지로더*/
+#page_load {position:fixed;left:0;top:0;width:100%;height:100%;background:#fff;text-align:center;z-index:100;
+    .inner {position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}
+}
+
+/*헤더*/
+#header {position:absolute;left:0;top:0;width:100%;height:75px;z-index:50; transition: all 0.1s;background-color: #fff; box-shadow: 0 10px 10px rgba(0,0,0,0.02); border-bottom: 1px solid #eee;transition:none; text-align: center;
+    h1 {width: 106px; position: absolute; top: 0; left: 0;
+        a {display: block; height: 75px; background:url('../images/logo01_active.png') no-repeat center;}
+    }
+    #gnb {display: inline-block;
+            &.off{display: none;}
+            img{display: none;}
+            ul {@include clear;position:relative;
+                > li{float: left;
+                    > a {display: block; padding: 0 25px;
+                        span {display: block; color:#000; font-size: 18px; font-weight: 500; letter-spacing: 0.5px; height: 75px; line-height: 75px; transition: all 0.2s;}
+                    }
+                    &.active, &:hover {
+                        > a > span {color: #024c98; border-bottom: 3px solid #024c98; transition: color 0.2s;}
+                    }
+                    &:first-of-type{
+                        >a{padding-left: 0;}
+                    }
+                    &:last-of-type {
+                        > a {padding-right:0;}
+                    }
+                }
+            }
+        @include maxWidth(1040px){display: none;}
+    }
+    button{display:block; width:30px;height:30px; z-index: 9999; 
+        span{position: absolute; left: 0; top: 50%; transform: translatey(-50%); margin-top: -1px; width: 100%; height: 3px; background-color: #000;
+            right: 0; transition: opacity 0.3s 0.3s, margin 0.3s 0.3s, transform 0.3s 0s;
+            &:first-child{margin-top: -10px;}
+            &:nth-child(2){width: 69%; left: auto; right: 1px;}
+            &:nth-child(3){margin-top: 8px;}
+        }
+        &.active {right: 0px; 
+            span{transition: opacity 0.3s 0.3s, margin 0.3s 0s, transform 0.3s 0.3s; background: #000 !important;
+                &:nth-child(1){margin-top: -1px; transform: rotate(-45deg);}
+                &:nth-child(2){opacity: 0;}
+                &:nth-child(3){margin-top: -1px; transform: rotate(45deg);}
+            }
+        }
+    }
+    .attr{position: absolute; top: 23px ; right: 0px;}
+    .sitemap{display:none; position: absolute; top: 60px; left: 0; background: #fff; width: 100%; height: calc(100vh - 60px); z-index: 99; overflow-y: auto; 
+        .s_logo{position: absolute; top:30px; left: 50px;}
+        >div{max-width: 1330px; margin: auto; padding: 115px 0 60px 0; text-align: left;}
+        ul{margin-bottom: 80px;
+            >li{font-size: 0; line-height: 0; margin-bottom: 50px;
+                &:last-child{margin-bottom: 0;}
+                >a{display: inline-block; vertical-align: middle; width: 400px;  line-height: 1.2; 
+                    span{display:inline-block; font-weight: bold; font-size: 48px; position: relative; overflow:hidden;
+                       @include minWidth(1041px){
+                        &:after{content: ""; width: 100%; height: 6px; background: #000; position: absolute; bottom: 0; left: -100%; transition: all 0.3s;}
+                       }
+                    }
+                }
+                ol{display: inline-block; vertical-align: -18px; width: calc(100% - 400px);
+                    &:after{content: ""; display: block; clear: both;}
+                    li{float: left; margin-right: 50px;
+                        &:last-child{margin-right: 0;}
+                        a{font-size: 20px; line-height: 1.2; font-weight: 500; color: #97999c;
+                        }
+                        @include minWidth(1041px){
+                            &:hover{
+                                a{color: #000;}
+                            }
+                        }
+                    }
+                }
+                @include minWidth(1041px){
+                    &:hover > a > span{
+                        &:after{content: ""; left: 0;}
+                    }
+                }
+            }
+        }
+        .down{display: block; font-size: 20px; font-family: 'Nexon Gothic Lv1'; font-weight: 500;
+            &:after{content: ""; display: inline-block; vertical-align: middle; width: 19px; height: 19px; background: url(../images/icon_down.png) no-repeat center; position: relative; top: -3px; margin-left: 10px;}
+        }
+        button{position: absolute; top:20px; right: 34px;}
+        @include maxWidth(1410px){
+            >div{padding: 115px 30px 60px 30px; max-width: 100%;}
+        }
+        @include maxWidth(1040px){
+            >div{padding: 40px 30px;}
+            ul{text-align: center; margin-bottom: 45px;
+                >li{margin-bottom: 26px;
+                    &.active{
+                        >a{
+                            span{
+                                &:after{content: ""; left: 0;}
+                            }
+                        }
+                    }
+                    >a{display: block; width: 100%;
+                        span{font-size: 24px;
+                            &:after{content: ""; width: 100%; height: 3px; background: #000; position: absolute; bottom: 0; left: -100%; transition: all 0.3s;}
+                        }
+                    }
+                    ol{display: none; width: 100%; margin-top: 15px;
+                        &:active{display: block;}
+                         li{float: none; margin-right: 0; margin-bottom:22px;
+                            a{font-size: 14px;}
+                            &:last-child{margin-bottom: 0;}
+                        }
+                    }
+                }
+            }
+            .down{text-align: center; font-size: 16px;
+                &:after{background: url(../images/icon_down.png) no-repeat center/13px auto; margin-left: 5px;}
+            }
+        }
+    }
+    &.main {-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;-moz-transition:all 0.5s;background-color:transparent;border:0;
+        h1 {
+            a {background-image:url('../images/logo01.png');background-repeat:no-repeat;background-position:center;}
+        }
+        .attr button span{background: #fff;}   
+        #gnb ul > li{
+            >a span{color: #fff;}
+        }
+    }
+    &.main:hover, &.main.active{background-color: #fff; box-shadow: 0 10px 10px rgba(0,0,0,0.02); border-bottom: 1px solid #eee;transition:none;
+        h1 a{background-image: url('../images/logo01_active.png');}
+        .attr button span{background: #000;}
+        #gnb ul > li {
+            > a span {color: #000;}
+            &.active, &:hover {
+                > a > span {color: #024c98; border-bottom: 3px solid #024c98; transition: color 0.2s;}
+            }
+        }
+    }
+    &.main.active{-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-o-transition:all 0.5s;-moz-transition:all 0.5s;}
+    
+   
+    @include maxWidth($tb1000){height: 60px; box-shadow: 0 10px 10px rgba(0,0,0,0.02); -webkit-box-shadow: 0 10px 10px rgba(0,0,0,0.02);
+        
+    }
+    @include maxWidth(1040px){
+        h1{width: 70px;
+            a{height: 60px; background-image: url(../images/logo01_active.png);background-size:70px auto;}
+        }
+        &.main:hover, &.active{
+            h1{
+                a{background-image: url(../images/logo01_active.png);}
+            }
+        }
+        .attr{top: 19px;}
+        button{width: 21px; height: 21px;
+            span{
+                &:first-child{margin-top: -9px;}
+                &:nth-child(3){margin-top: 7px;}
+            }
+        }
+    }
+}
+
+/*푸터*/
+#footer {
+    // background:#191919; position: relative;
+    // a{position: absolute; top: 46px; right: 0; color: #fff;}
+    // ul {display:inline-block; padding: 40px 0 60px 0; position: relative;
+    //     li {color: #878787; font-size: 14px; margin-bottom: 10px;
+    //         &:first-of-type{color: #fff; font-size: 25px; font-weight: 500; margin-bottom: 18px;letter-spacing:0.1em;}
+    //         &:last-of-type{margin-bottom: 0;}
+    //        span {white-space:nowrap;}
+    //     }
+    // }
+    // @include maxWidth($tb1000){text-align: center;
+    //    ul{padding: 25px 0 30px 0;
+    //         li{
+    //             &:first-child{font-size: 20px; margin-bottom: 12px;}
+    //         }
+    //     }
+    // }
+    /*210618 추가*/
+    background-color:#fff;padding:55px 0 60px;color:#000; border-top:1px solid #f2f2f5;
+    .container1 {@include clear;position:relative;
+        dl {float:left;width:350px;
+            dt {font-size:18px;font-weight:600;margin-bottom:10px;}
+            dd {display:inline-block;font-size:15px;padding:2px 0;font-family:'Noto Sans',sans-serif;padding-right:11px;
+                div {margin-bottom:4px;}
+                strong {display:block;margin-top:-6px;font-size:28px;font-weight:500;}
+                &.copy {display:block;font-size:12px;margin-top:16px;font-weight:500;font-family:'Nexon Gothic Lv1 EN',sans-serif;}
+            }
+            &:first-of-type {width:410px;margin-right:140px;}
+        }
+        ol {float:right;text-align:right;
+            li {margin-bottom:12px;
+                a {border-bottom:1px solid #000;font-size:16px;font-weight:600;}
+            }
+        }
+
+    }
+    @include maxWidth(1100px) {
+        .container1 {@include clear;position:relative;
+            dl:first-of-type{margin-right:40px;}
+        }
+    }
+    @include maxWidth($tb1000) {
+        .container1 {
+            .mhide {display:none;}
+        }
+    }
+    @include maxWidth($m768) {
+       padding:25px 0;
+        .container1 {
+            dl {width:350px;
+                dt {font-size:14px;margin-bottom:50px;}
+                dd {font-size:12px;
+                    &.copy {font-size:10px;margin-top:13px;}
+                }
+            }
+            ol {text-align:left;position:absolute;left:15px;top:30px;
+                li {float:left;margin-right:17px;margin-bottom:0;
+                    a {font-size:12px;}
+                }
+            }
+        }
+    }
+
+
+    
+}
+/*
+스크롤 탑 이동 버튼
+.scrollTop{position: absolute; right: 169px; top: -50px; display: block; width: 90px; height: 90px; background: #2d2d2d url(../images/icon_up.png) no-repeat center; 
+    @include maxWidth($tb1000){ width: 45px; height: 45px; background: #2d2d2d url(../images/icon_up.png) no-repeat center/15px 9px; right:30px; top: -25px;
+    }
+}
+*/
+
+
+
+
+

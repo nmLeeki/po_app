@@ -1,0 +1,300 @@
+@charset "UTF-8"; 
+@font-face {
+	font-family: 'Noto Sans';
+	font-weight: 200;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-Light.eot');
+	src: local(※), url('../fonts/NotoSansKR-Light.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NotoSansKR-Light.woff') format('woff'),
+	url('../fonts/NotoSansKR-Light.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans';
+	font-weight: 300;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-DemiLight.eot');
+	src: local(※), url('../fonts/NotoSansKR-DemiLight.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NotoSansKR-DemiLight.woff') format('woff'),
+	url('../fonts/NotoSansKR-DemiLight.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../common/fonts/NotoSansKR-Regular.eot');
+	src: local(※), url('../fonts/NotoSansKR-Regular.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NotoSansKR-Regular.woff') format('woff'),
+	url('../fonts/NotoSansKR-Regular.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans';
+	font-weight: 500;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-Medium.eot');
+	src: local(※), url('../fonts/NotoSansKR-Medium.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NotoSansKR-Medium.woff') format('woff'),
+	url('../fonts/NotoSansKR-Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Noto Sans';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../fonts/NotoSansKR-Bold.eot');
+	src: local(※), url('../fonts/NotoSansKR-Bold.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NotoSansKR-Bold.woff') format('woff'),
+	url('../fonts/NotoSansKR-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Nexon Gothic Lv1 EN';
+	font-weight: 300;
+	font-style: normal;
+	src: local('넥슨Lv1고딕 Light'),
+	url('../fonts/NEXON Lv1 Gothic OTF Light.eot'),
+	url('../fonts/NEXON Lv1 Gothic OTF Light.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+	unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+	font-family: 'Nexon Gothic Lv1 EN';
+	font-weight: 400;
+	font-style: normal;
+	src: local('넥슨Lv1고딕'),
+	url('../fonts/NEXON Lv1 Gothic OTF.eot'),
+	url('../fonts/NEXON Lv1 Gothic OTF.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NEXON Lv1 Gothic OTF.woff') format('woff');
+	unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+	font-family: 'Nexon Gothic Lv1 EN';
+	font-weight: 500;
+	font-style: normal;
+	src: local('넥슨Lv1고딕 Bold'),
+	url('../fonts/NEXON Lv1 Gothic OTF Bold.eot'),
+	url('../fonts/NEXON Lv1 Gothic OTF Bold.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+	unicode-range:U+0041-005A, U+0061-007A, U+0030-0039;
+}
+@font-face {
+	font-family: 'Nexon Gothic Lv1';
+	font-weight: 300;
+	font-style: normal;
+	src: local('넥슨Lv1고딕 Light'),
+	url('../fonts/NEXON Lv1 Gothic OTF Light.eot'),
+	url('../fonts/NEXON Lv1 Gothic OTF Light.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+}
+@font-face {
+	font-family: 'Nexon Gothic Lv1';
+	font-weight: 400;
+	font-style: normal;
+	src: local('넥슨Lv1고딕'),
+	url('../fonts/NEXON Lv1 Gothic OTF.eot'),
+	url('../fonts/NEXON Lv1 Gothic OTF.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NEXON Lv1 Gothic OTF.woff') format('woff');
+}
+@font-face {
+	font-family: 'Nexon Gothic Lv1';
+	font-weight: 500;
+	font-style: normal;
+	src: local('넥슨Lv1고딕 Bold'),
+	url('../fonts/NEXON Lv1 Gothic OTF Bold.eot'),
+	url('../fonts/NEXON Lv1 Gothic OTF Bold.eot#iefix') format('embedded-opentype'),
+	url('../fonts/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+}
+
+// @font-face {
+// 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
+// 	src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+// 	url('../fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+// 	url('../fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
+// @font-face {
+// 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+// 	src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+// 	url('../fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+// 	url('../fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
+// @font-face {
+// 	font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
+// 	src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+// 	url('../fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+// 	url('../fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+// }
+
+// @font-face {
+// 	font-family: 'Roboto';
+// 	font-weight: 300;
+// 	font-style: normal;
+// 	src: url('../fonts/Roboto-Light.eot');
+// 	src: url('../fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'),
+// 			url('../fonts/Roboto-Light.woff') format('woff'),
+// 			url('../fonts/Roboto-Light.otf') format('opentype');
+// 	unicode-range: U+0030-0039;
+// }
+// @font-face {
+// 	font-family: 'Roboto';
+// 	font-weight: 400;
+// 	font-style: normal;
+// 	src: url('../fonts/Roboto-Regular.eot');
+// 	src: url('../fonts/Roboto-Regular.eot?#iefix') format('embedded-opentype'),
+// 			url('../fonts/Roboto-Regular.woff') format('woff'),
+// 			url('../fonts/Roboto-Regular.otf') format('opentype');
+// 	unicode-range: U+0030-0039;
+// }
+// @font-face {
+// 	font-family: 'Roboto';
+// 	font-weight: 500;
+// 	font-style: normal;
+// 	src: url('../fonts/Roboto-Medium.eot');
+// 	src: url('../fonts/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+// 			url('../fonts/Roboto-Medium.woff') format('woff'),
+// 			url('../fonts/Roboto-Medium.otf') format('opentype');
+// 	unicode-range: U+0030-0039;
+// }
+// @font-face {
+// 	font-family: 'Roboto';
+// 	font-weight: 700;
+// 	font-style: normal;
+// 	src: url('../fonts/Roboto-Bold.eot');
+// 	src: url('../fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+// 			url('../fonts/Roboto-Bold.woff') format('woff'),
+// 			url('../fonts/Roboto-Bold.otf') format('opentype');
+// 	unicode-range: U+0030-0039;
+// }
+/********* reset.css **********/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ul, ol, li,
+form, fieldset, legend, label, input, button, select, textarea,
+header, main, footer, section, article, aside, menu, nav, 
+table, caption, tbody, tfoot, thead, tr, th, td, summary,
+figure, figcaption, hgroup {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-weight:normal;
+	font-family: 'Nexon Gothic Lv1 EN','Noto Sans', sans-serif; font-size:16px; line-height: 1.4; color: #000;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+html, body{width: 100%; height: 100%;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+//타이틀,영문,숫자는 Nexon Gothic Lv1 폰트 적용
+h1,h2,h3,h4,h5,h6 {font-size: 1em; font-weight: normal;}
+h1,h2 {font-family:'Nexon Gothic Lv1',sans-serif;}
+.ff_nx{font-family:'Nexon Gothic Lv1',sans-serif;}
+ul,ol,li {list-style-type: none;}
+a {color: inherit; text-decoration: none;}
+img {max-width: 100%; border: 0 none;}
+address {font-style: normal;}
+button {margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; border: 0 none; background-color: transparent; font-family: inherit; font-size: inherit; cursor: pointer;}
+caption,legend {height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); margin: -1px; position: static;}
+table {border-spacing:0;border-collapse:collapse;table-layout:fixed;}
+ul::after, ol::after {content: ""; display: block; clear: both;}
+/* form properties */
+.hide{clip: rect(0 0 0 0); width: 1px; height: 1px; position: absolute; overflow: hidden; margin: -1px; padding: 0; border: 0;}
+
+
+/*변수 정의*/
+//컬러
+$black1 : #222;
+$black2 : #555;
+$red: #e42121;
+$orange: #ff9000;
+$orange2: #f56200;
+$yellow: #ffc107;
+$blue: #0067d1;
+$green1: #00832b;
+$green2: #00aa38;
+$brown: #b63c00;
+$pink: #f66184;
+$gray-black: #222;
+$gray-deep: #343434;
+$gray-dark: #666;
+$gray-base: #757575;
+$gray-medium: #a4a4a4;
+$gray-medium2: #cecece;
+$gray-light: #fafafa;
+$popup-bg: rgba(0,0,0,0.8);
+$point-color1: #0379d5;
+$point-color2: #04a2a1;
+$point-color3: #495f74;
+$point-color4: #ffd200;
+$bg-color1: #f9fafb;
+$bg-color2: #f5f7f9;
+
+// font-size
+$fs10:0.625rem;// 10px
+$fs12:0.75rem;// 12px
+$fs13:0.8125rem;// 13px
+$fs14:0.875rem;// 14px
+$fs15:0.9375rem;// 15px
+$fs16:1rem;// 16px
+$fs17:1.0625rem;// 17px
+$fs18:1.125rem;// 18px
+$fs19:1.1875rem;// 19px
+$fs20:1.25rem;// 20px
+$fs21:1.3125rem;// 21px
+$fs22:1.375rem;// 22px
+$fs23:1.4375rem;// 23px
+$fs24:1.5rem;// 24px
+$fs26:1.625rem;// 26px
+$fs28:1.75rem;// 28px
+$fs30:1.875rem;// 30px
+$fs32:2rem;// 32px
+
+//border
+$border: 1px solid #ddd;
+
+//font
+$noto: 'Noto Sans', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+
+
+
+/*요소정렬*/
+@mixin align($align,$font-size){
+	font-size:0;
+	&:before{display:inline-block;height:100%;content:''; vertical-align:$align;}
+	> :nth-child(n) {font-size:$font-size;display:inline-block;vertical-align:$align;}
+}
+
+@mixin ell1{
+	text-overflow: ellipsis; overflow: hidden; white-space: nowrap;
+}
+@mixin ell2{
+	text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+@mixin ell3{
+	text-overflow: ellipsis; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+}
+
+//float clearboth
+@mixin clear{&:after{content: ''; display: block; clear: both;}}
+
+
+
+// 미디어쿼리 변수/믹스인
+$con1600: 1600px;
+$con1340: 1340px;
+$pc1201 : 1201px;
+$tb1000: 1000px;
+$m768: 768px;
+@mixin maxWidth($width){
+	@media screen and (max-width:$width){
+        @content;
+    }
+}
+@mixin minWidth($width){
+	@media screen and (min-width:$width){
+        @content;
+    }   
+}

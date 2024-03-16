@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>퍼블리싱 작업현황판</title>
+    <style>
+      html,
+      body,
+      div,
+      span,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a,
+      em,
+      img,
+      strong,
+      b,
+      dl,
+      dt,
+      dd,
+      ul,
+      ol,
+      li,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      footer,
+      header,
+      menu,
+      nav,
+      section {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        padding: 2em;
+        line-height: 1.4;
+        font-family: applegothic, "나눔고딕", nanumgothic, "맑은 고딕",
+          malgungothic, dotum, "돋움";
+        font-size: 13px;
+        color: #333;
+      }
+      ul,
+      ol {
+        list-style-type: none;
+      }
+      table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        table-layout: fixed;
+      }
+      h1 {
+        font-size: 1.45em;
+      }
+      h2 {
+        margin-bottom: 5px;
+        font-size: 1.3em;
+      }
+      h3 {
+        font-size: 1.2em;
+      }
+      th {
+        vertical-align: middle;
+        word-break: break-all;
+      }
+      td {
+        vertical-align: middle;
+        word-break: break-all;
+      }
+      a {
+        color: #666;
+      }
+      .hidden {
+        position: absolute;
+        top: -99999em;
+        left: -99999em;
+      }
+      .info {
+        margin: 0 0 3em;
+        width: 100%;
+        border-top: 1px dashed #ddd;
+      }
+      .info th {
+        padding: 0.5em 1em;
+        border-bottom: 1px dashed #ddd;
+        text-align: left;
+        border-right: 0;
+        background-color: #f6f6f6;
+      }
+      .info td {
+        padding: 0.5em 1em;
+        border-bottom: 1px dashed #ddd;
+        text-align: left;
+        border-left: 0;
+      }
+      .work {
+        width: 100%;
+        margin: 0 0 3em;
+        width: 100%;
+        border-top: 2px solid #aaa;
+      }
+      .work th {
+        font-family: "calbri";
+        padding: 0.5em;
+        border: 1px solid #ddd;
+        border-left-width: 0;
+        background: #f9f9f9;
+      }
+      .work td {
+        padding: 0.5em;
+        border-bottom: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        background: #fff;
+        vertical-align: middle;
+      }
+      .work th:last-child,
+      .work td:last-child {
+        border-right-width: 0;
+      }
+      .tit td {
+        border-top: 2px solid #ccc;
+      }
+      .work td:nth-last-child(2),
+      .work td:nth-last-child(3) {
+        text-align: center;
+        color: #666;
+      }
+      .yellow td {
+        background: #fff8d0;
+      }
+      .red {
+        color: #dc5959;
+      }
+      .status {
+        text-align: right;
+        margin-bottom: 10px;
+      }
+      .status h2 {
+        float: left;
+      }
+      .status span {
+        display: inline-block;
+        margin-left: 10px;
+      }
+      .tit1 {
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 style="font-family: 'calbri'">Project info.</h2>
+    <table class="info">
+      <caption>
+        <span class="hidden">프로젝트 기본 정보</span>
+      </caption>
+      <colgroup>
+        <col style="width: 180px" />
+        <col />
+      </colgroup>
+      <tbody>
+        <tr>
+          <th scope="row">1. 프로젝트명222</th>
+          <td>엔티시스 리뉴얼 홈페이지 구축 작업현황판</td>
+        </tr>
+        <tr>
+          <th scope="row">2. 인코딩 방식</th>
+          <td>utf-8</td>
+        </tr>
+        <tr>
+          <th scope="row">3. dtd 사용</th>
+          <td>Html5</td>
+        </tr>
+        <tr>
+          <th scope="row">4. css 사용</th>
+          <td>css3</td>
+        </tr>
+        <tr>
+          <th scope="row">5. 크로스 브라우징</th>
+          <td>IE9</td>
+        </tr>
+        <tr>
+          <th scope="row">6. 웹 접근성</th>
+          <td>준수</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="status">
+      <h2 style="font-family: 'calbri'">Publish List</h2>
+      <span>○ 퍼블 대기중</span> <span>◐ 퍼블 작업중</span>
+      <span>● 퍼블 완료</span>
+    </div>
+    <table class="work">
+      <colgroup>
+        <col style="width: 10%" />
+        <col style="width: 15%" />
+        <col style="width: 15%" />
+        <col style="width: 12%" />
+        <col style="width: 18%" />
+        <col style="width: 50px" />
+        <col style="width: 50px" />
+        <col />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">TYPE</th>
+          <th scope="col">1Dep</th>
+          <th scope="col">2Dep</th>
+          <th scope="col">3Dep</th>
+          <th scope="col">FileName</th>
+          <th scope="col">ing</th>
+          <th scope="col">num</th>
+          <th scope="col">Memo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tit">
+          <td>메인</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><a href="index.html" target="_blank">index.html</a></td>
+          <td>●</td>
+          <td>1</td>
+          <td></td>
+        </tr>
+        <tr class="tit">
+          <td rowspan="16">서브</td>
+          <td rowspan="3">company</td>
+          <td>회사소개</td>
+          <td></td>
+          <td>
+            <a href="company.html" target="_blank">company.html</a>
+          </td>
+          <td>●</td>
+          <td>2</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>회사연혁</td>
+          <td></td>
+          <td>
+            <a href="company_history.html" target="_blank">company_history.html</a>
+          </td>
+          <td>●</td>
+          <td>3</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>고객사</td>
+          <td></td>
+          <td>
+            <a href="company_partners.html" target="_blank">company_partners.html</a>
+          </td>
+          <td>●</td>
+          <td>4</td>
+          <td></td>
+        </tr>
+        <tr class="tit">
+          <td rowspan="5">business</td>
+          <td>SI</td>
+          <td></td>
+          <td><a href="business.html" target="_blank">business.html</a></td>
+          <td>●</td>
+          <td>5</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>SM</td>
+          <td></td>
+          <td><a href="business_sm.html" target="_blank">business_sm.html</a></td>
+          <td>●</td>
+          <td>6</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>UI/UX Design</td>
+          <td></td>
+          <td><a href="business_ui-ux-design.html" target="_blank">business_ui-ux-design.html</a></td>
+          <td>●</td>
+          <td>7</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Solution</td>
+          <td></td>
+          <td><a href="business_solution.html" target="_blank">business_solution.html</a></td>
+          <td>●</td>
+          <td>8</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>ITC</td>
+          <td></td>
+          <td><a href="business_itc.html" target="_blank">business_itc.html</a></td>
+          <td>●</td>
+          <td>9</td>
+          <td></td>
+        </tr>
+        <tr class="tit">
+          <td rowspan="4">solution</td>
+          <td>M-Voting</td>
+          <td></td>
+          <td>
+            <a href="solution.html" target="_blank">solution.html</a>
+          </td>
+          <td>●</td>
+          <td>10</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NT-CMS</td>
+          <td></td>
+          <td>
+            <a href="solution_nt-cms.html" target="_blank">solution_nt-cms.html</a>
+          </td>
+          <td>●</td>
+          <td>11</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>PMS</td>
+          <td></td>
+          <td>
+            <a href="solution_pms.html" target="_blank">solution_pms.html</a>
+          </td>
+          <td>●</td>
+          <td>12</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>위반건축물관리시스템</td>
+          <td></td>
+          <td>
+            <a href="solution_sol-system.html" target="_blank">solution_sol-system.html</a>
+          </td>
+          <td>●</td>
+          <td>13</td>
+          <td></td>
+        </tr>
+        <tr class="tit">
+          <td rowspan="3">Portfolio</td>
+          <td>ALL</td>
+          <td></td>
+          <td>
+            <a href="portfolio.html" target="_blank">portfolio.html</a>
+          </td>
+          <td>●</td>
+          <td>14</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Web</td>
+          <td></td>
+          <td>
+            <a href="portfolio_web.html" target="_blank">portfolio_web.html</a>
+          </td>
+          <td>●</td>
+          <td>15</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>App</td>
+          <td></td>
+          <td>
+            <a href="portfolio_app.html" target="_blank">portfolio_app.html</a>
+          </td>
+          <td>●</td>
+          <td>16</td>
+          <td></td>
+        </tr>
+        <tr class="tit">
+          <td>contactus</td>
+          <td></td>
+          <td></td>
+          <td>
+            <a href="contactUs.html" target="_blank">contactUs.html</a>
+          </td>
+          <td>●</td>
+          <td>17</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
