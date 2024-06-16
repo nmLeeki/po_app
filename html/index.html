@@ -33,7 +33,7 @@
                 <a href="#gnb">주메뉴 바로가기</a>
                 <a href="#contents">본문 바로가기</a>
             </div>""
-            <div class="text-radio" style="background-color: red;">
+            <div class="text-radio" style="background-color: blue;">
                 <input type="radio" id="radio_1" name="radio_1">
                 <label for="radio_1">111</label>
                 <input type="radio" id="2" name="radio_1">
@@ -280,12 +280,7 @@
                         </div>
                     </div>
                     <button type="button" class="btn_link type2" title="포트폴리오 페이지로 이동">VIEW MORE</button>
-                    <script>
-                        var aaa = $('.text-radio').offset().top;
-                        $('.btn_link.type2').on('click',function(){
-                            $('html,body').scrollTop(aaa);
-                        })
-                    </script>
+                   
                 </div>
                 <!-- //포트폴리오 -->
                 <!-- 파트너스 -->
@@ -383,6 +378,13 @@
                 <!-- <button class="scrollTop"><span class="hide">맨위로</span></button> -->
             </footer>
             <!-- //푸터 -->
+            <script>
+               $(document).ready(function(){
+                $('.btn_link.type2').on('click',function(){
+                    $('html,body').animate({scrollTop:$('.text-radio').offset().top},200)
+                })
+               })
+            </script>
         </div>
     </body>
 </html>
