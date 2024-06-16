@@ -282,7 +282,9 @@
                     <button type="button" class="btn_link type2" title="포트폴리오 페이지로 이동">VIEW MORE</button>
                     <script>
                         $('.btn_link.type2').on('click',function(){
-                           $('html,body').animate({scrollTop:$('.text-radio').offset().top},300)
+                           setTimeout(function(){
+                            $('html,body').animate({scrollTop:$('.text-radio').offset().top},200)
+                           },150);
                         })
                     </script>
                 </div>
