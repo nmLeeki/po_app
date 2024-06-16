@@ -455,7 +455,4 @@ $(window).on('resize load', function () {
             percentPosition: true,
         });
     }
-    $('.btn_link.type2').on('click',function(){
-        $('html,body').animate({scrollTop:$('.text-radio').offset().top},200)
-    })
 });
