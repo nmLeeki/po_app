@@ -32,17 +32,19 @@
                 <strong class="hide">바로가기 메뉴</strong>
                 <a href="#gnb">주메뉴 바로가기</a>
                 <a href="#contents">본문 바로가기</a>
-            </div>"
-            <input type="radio" id="radio_1" name="radio_1">
-            <label for="radio_1">111</label>
-            <input type="radio" id="2" name="radio_1">
-            <label for="2">222</label>
-            <input type="radio" id="3" name="radio_1">
-            <label for="3">333</label>
-            <input type="radio" id="4" name="radio_1">
-            <label for="4">444</label>
-            <input type="radio" id="5" name="radio_1">   
-            <label for="5">555</label> 
+            </div>""
+            <div class="text-radio">
+                <input type="radio" id="radio_1" name="radio_1">
+                <label for="radio_1">111</label>
+                <input type="radio" id="2" name="radio_1">
+                <label for="2">222</label>
+                <input type="radio" id="3" name="radio_1">
+                <label for="3">333</label>
+                <input type="radio" id="4" name="radio_1">
+                <label for="4">444</label>
+                <input type="radio" id="5" name="radio_1">   
+                <label for="5">555</label> 
+            </div>
             <!--//스킵내비게이션 -->
             <!-- 헤더 -->
             <header id="header">
@@ -280,7 +282,7 @@
                     <button type="button" class="btn_link type2" title="포트폴리오 페이지로 이동">VIEW MORE</button>
                     <script>
                         $('.btn_link.type2').on('click',function(){
-                           $('html,body').animate({scrollTop:$('#radio_1').offset().top},300)
+                           $('html,body').animate({scrollTop:$('.text-radio').offset().top},300)
                         })
                     </script>
                 </div>
