@@ -33,7 +33,7 @@
                 <a href="#gnb">주메뉴 바로가기</a>
                 <a href="#contents">본문 바로가기</a>
             </div>""
-            <div class="text-radio" style="background-color: salmon">
+            <div class="text-radio" style="background-color: blueviolet">
                 <input type="radio" id="radio_1" name="radio_1">
                 <label for="radio_1">111</label>
                 <input type="radio" id="2" name="radio_1">
@@ -384,7 +384,7 @@
         </div>
         <script>
              $('.btn_link.type2').on('touchstart click',function(){
-                   $('#radio_1').focus()
+                    $('html,body').animate({scrollTop:$('.text-radio').offset().top},200)
                 })
         </script>
     </body>
