@@ -33,7 +33,7 @@
                 <a href="#gnb">주메뉴 바로가기</a>
                 <a href="#contents">본문 바로가기</a>
             </div>""
-            <div class="text-radio" style="background-color: green;">
+            <div class="text-radio" style="background-color: red;">
                 <input type="radio" id="radio_1" name="radio_1">
                 <label for="radio_1">111</label>
                 <input type="radio" id="2" name="radio_1">
@@ -283,7 +283,7 @@
                     <script>
                         var aaa = $('.text-radio').offset().top;
                         $('.btn_link.type2').on('click',function(){
-                            $('html,body').animate({scrollTop:aaa},200)
+                            $('html,body').scrollTop(aaa);
                         })
                     </script>
                 </div>
