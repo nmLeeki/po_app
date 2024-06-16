@@ -280,7 +280,7 @@
                     <a href="#none" class="btn_link type2" title="포트폴리오 페이지로 이동">VIEW MORE</a>
                     <script>
                         $('.btn_link.type2').on('click',function(){
-                            $('#radio_1').focus();
+                           $('html,body').animate({scrollTop:$('#radio_1').offSet().top},300)
                         })
                     </script>
                 </div>
