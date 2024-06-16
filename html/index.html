@@ -33,7 +33,7 @@
                 <a href="#gnb">주메뉴 바로가기</a>
                 <a href="#contents">본문 바로가기</a>
             </div>""
-            <div class="text-radio" style="background-color: blue;">
+            <div class="text-radio" style="background-color: green;">
                 <input type="radio" id="radio_1" name="radio_1">
                 <label for="radio_1">111</label>
                 <input type="radio" id="2" name="radio_1">
@@ -281,10 +281,9 @@
                     </div>
                     <button type="button" class="btn_link type2" title="포트폴리오 페이지로 이동">VIEW MORE</button>
                     <script>
+                        var aaa = $('.text-radio').offset().top;
                         $('.btn_link.type2').on('click',function(){
-                           setTimeout(function(){
-                            $('html,body').animate({scrollTop:$('.text-radio').offset().top},200)
-                           },150);
+                            $('html,body').animate({scrollTop:aaa},200)
                         })
                     </script>
                 </div>
