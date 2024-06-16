@@ -296,7 +296,7 @@ body.scrollDisable { overflow-y: hidden; }
 
 :-ms-input-placeholder { color: #777; }
 
-input, select:not([class^="ui-datepicker-"]), textarea { font-size: 15px; height: 34px; padding: 0 10px; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; display: block; border: 0; font-family: inherit; }
+input, select:not([class^="ui-datepicker-"]), textarea { font-size: 15px; height: 34px; padding: 0 10px; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; display: block; border: 0; font-family: inherit; }
 
 input::-ms-check { display: none; }
 
