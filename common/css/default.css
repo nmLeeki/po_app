@@ -540,7 +540,7 @@ button { -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; 
 .news { background: #252b5b;  padding-bottom: 0 !important; position: relative; }
 
 .news:before { content: ""; display: block; width: 50%; height: 100%; position: absolute; top: 0; left: 0; background: #fff; z-index: 0; }
-.main.active ~ .news .container1{margin-top: 100px;}
+.main.active ~ .news .container1{padding-top: 100px; background: #000;}
 .news .container1 { position: relative; }
 
 .news .container1:after { content: ""; display: block; clear: both; }
