@@ -537,10 +537,10 @@ button { -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; 
   .partners .slide_wrap > .slide a img { height: 130px; }
   .partners .control { top: 95px; right: 0; } }
 
-.news { background: #252b5b; padding-top: 0 !important; padding-bottom: 0 !important; position: relative; }
+.news { background: #252b5b;  padding-bottom: 0 !important; position: relative; }
 
 .news:before { content: ""; display: block; width: 50%; height: 100%; position: absolute; top: 0; left: 0; background: #fff; z-index: 0; }
-
+.main.active ~ .news{margin-top: 50px;}
 .news .container1 { position: relative; }
 
 .news .container1:after { content: ""; display: block; clear: both; }
