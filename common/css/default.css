@@ -103,7 +103,7 @@ body.scrollDisable { overflow-y: hidden; }
 #page_load .inner { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 
 /*헤더*/
-#header { position: absolute; left: 0; top: 0; width: 100%; height: 75px; z-index: 50; -webkit-transition: all 0.1s; transition: all 0.1s; background-color: #fff; -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.02); box-shadow: 0 10px 10px rgba(0, 0, 0, 0.02); border-bottom: 1px solid #eee; -webkit-transition: none; transition: none; text-align: center; }
+#header { position: fixed; background: #fff !important; left: 0; top: 0; width: 100%; height: 75px; z-index: 50; -webkit-transition: all 0.1s; transition: all 0.1s; background-color: #fff; -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.02); box-shadow: 0 10px 10px rgba(0, 0, 0, 0.02); border-bottom: 1px solid #eee; -webkit-transition: none; transition: none; text-align: center; }
 
 #header h1 { width: 106px; position: absolute; top: 0; left: 0; }
 
@@ -1610,3 +1610,4 @@ button { -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; 
 .br { display: block; }
 
 /*공통 클래스 영역*/
+.main.active + div{padding-top:50px; background: #000;}

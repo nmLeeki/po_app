@@ -25,9 +25,7 @@ function head_scroll() {
         var scrollTop = $(window).scrollTop();
         if (scrollTop > 80) {
             $('.main').addClass('active');
-        } else {
-            $('.main').removeClass('active');
-        }
+        } 
     });
 }
 
