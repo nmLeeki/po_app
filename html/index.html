@@ -148,6 +148,45 @@
             </header>
             <!-- //헤더 -->
             <!-- 메인 배너 슬라이드 -->
+            <style>
+                .tab_list{height:500px; margin-top:100px;}
+                .tab_list > li.active{color:red}
+                .tab_con .tab.active{display:block}
+                .tab_con .tab.active iframe{display: block;}
+                .tab_con .tab.active .html5-video-player{display: block; visibility: visible;}
+                .tab_con .tab .html5-video-player{display: none; visibility: hidden;}
+                .tab_con .tab{display:none;}
+                .tab_con .tab iframe{display:none;}
+            </style>
+            <ul class="tab_list">
+                <li class="active">tab1</li>
+                <li>tab2</li>
+                <li>tab3</li>
+            </ul>
+            <div class="tab_con">
+                <div class="tab active">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fVwX1G-DMtA?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="tab">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/6Osq32GpZqQ?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="tab">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/JC1_zVygm9Q?enablejsapi=1&version=3&playerapiid=ytplayer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <script>
+                $(document).on('click','.tab_list > li',function(){
+                    var idx = $(this).index();
+                    $(this).addClass('active').siblings().removeClass('active');
+                    $(this).parent().next().children().eq(idx).addClass('active').siblings().removeClass('active');
+                    var video =  $(this).parent().next().children().eq(idx);
+                    for(let i=0;i<$('.tab_list > li').length;i++){
+                        $("iframe")[i].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
+                    }
+                    
+                    
+                });
+            </script>
             <div class="mb_wrap">
                 <div class="main_slide">
                     <div class="mb1">
